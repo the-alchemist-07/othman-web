@@ -23,6 +23,7 @@
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #151515; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #ffc451; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color-dark: #f1ab1e; /* Darker shade of the accent color for text used on light backgrounds */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #312f2f; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -908,6 +909,12 @@ section,
   font-weight: 700;
 }
 
+.about .content h6 {
+  font-size: 1.20rem;
+  font-weight: 700;
+  color: var(--accent-color-dark);
+}
+
 .about .content .fst-italic {
   color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
 }
@@ -1613,11 +1620,29 @@ section,
   transition: 0.3s;
 }
 
+
+.service-details .services-list p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+
 .service-details .services-list a:first-child {
   margin-top: 0;
 }
 
 .service-details .services-list a i {
+  font-size: 16px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+.service-details .services-list p i {
   font-size: 16px;
   margin-right: 8px;
   color: var(--accent-color);
@@ -1633,6 +1658,11 @@ section,
 }
 
 .service-details .services-list a:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  color: var(--accent-color);
+}
+
+.service-details .services-list p:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
   color: var(--accent-color);
 }
@@ -1690,6 +1720,12 @@ section,
   font-weight: 700;
 }
 
+.service-details h6 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent-color-dark);
+}
+
 .service-details p {
   font-size: 15px;
 }
@@ -1717,4 +1753,8 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.sitename-primary {
+  color: var(--accent-color);
 }
