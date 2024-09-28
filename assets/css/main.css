@@ -943,6 +943,15 @@ section,
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+.clients .description {
+  margin-bottom: 30px;
+}
+
+.clients .description p {
+  color: #ffaa00;
+  font-size: 1.25rem;
+}
+
 .clients .swiper-slide img {
   opacity: 0.5;
   transition: 0.3s;
